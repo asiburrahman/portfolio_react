@@ -108,7 +108,13 @@ const Navbar = () => (
                             {link}
                         </ul>
                     </div>
-                    <Link to='/' className="text-xl font-bold  md:text-2xl lg:text-3xl">EventNest</Link>
+                    <div className='flex items-center justify-center gap-2'>
+                  
+                  <Link to='/' className="text-sm font-bold   md:text-2xl lg:text-3xl">
+                  <img className='w-12 h-12 rounded-full  md:inline-block ' src='/logo.jpg' alt="" />
+                  </Link> 
+                  
+                </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
