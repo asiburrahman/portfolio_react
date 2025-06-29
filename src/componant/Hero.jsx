@@ -13,9 +13,9 @@ const Hero = () => (
           I am a passionate full-stack developer with expertise in React, Node.js, Express, and MongoDB. I build scalable, responsive web applications that solve real-world problems and deliver user satisfaction.
         </p>
         <div className="flex gap-4 text-2xl">
-          <a href="https://github.com/asiburcse" target="_blank" rel="noreferrer"><FaGithub /></a>
-          <a href="https://linkedin.com/in/asiburcse" target="_blank" rel="noreferrer"><FaLinkedin /></a>
-          <a href="https://twitter.com/asiburcse" target="_blank" rel="noreferrer"><FaTwitter /></a>
+          <a href="https://github.com/asiburrahman" target="_blank" rel="noreferrer"><FaGithub /></a>
+          <a href="https://www.linkedin.com/in/asiburrahman/" target="_blank" rel="noreferrer"><FaLinkedin /></a>
+          <a href="https://x.com/asibur70" target="_blank" rel="noreferrer"><FaTwitter /></a>
         </div>
         <a href="/resume.pdf" download className="btn btn-primary mt-4">Download Resume</a>
       </div>
