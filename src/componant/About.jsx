@@ -23,7 +23,7 @@ const About = () => {
             <h3 className="text-xl font-semibold">The Type of Work I Enjoy</h3>
           </div>
           <p>
-            I enjoy creating clean, user-friendly interfaces and writing backend APIs. Solving complex problems, optimizing performance, and working on collaborative projects where I can learn and contribute are my favorite parts of the job.
+            I enjoy building clean, user-friendly interfaces and developing robust backend APIs. I find satisfaction in solving complex problems, optimizing performance, and contributing to collaborative projects. My learning journey with Programming Hero has helped me grow both technically and professionally.
           </p>
         </section>
 

@@ -94,7 +94,7 @@ const Navbar = () => (
 
     // Daysiui Navbar
     <>
-        <div className='sticky top-0 z-50 bg-primary'>
+        <div className='sticky top-0 text-white z-50 bg-primary'>
 
             <div className="navbar   w-11/12 mx-auto">
                 <div className="navbar-start ">
