@@ -1,38 +1,16 @@
 import React, { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 import { FaGraduationCap, FaUniversity, FaCalendarAlt, FaSchool } from 'react-icons/fa';
 
-const cardVariants = {
-  hiddenLeft: { opacity: 0, x: -50 },
-  hiddenRight: { opacity: 0, x: 50 },
-  hiddenBottom: { opacity: 0, y: 50 },
-  visible: { opacity: 1, x: 0, y: 0, transition: { duration: 1, } }
-};
-
-const EducationCard = ({ variantType, children }) => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 1 });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start('visible');
-    }
-  }, [controls, inView]);
-
-  // Decide which hidden variant to use based on variantType prop
-  let hiddenVariant = 'hiddenLeft';
-  if (variantType === 'right') hiddenVariant = 'hiddenRight';
-  else if (variantType === 'bottom') hiddenVariant = 'hiddenBottom';
-
+const EducationCard = ({ delay = 0, children }) => {
   return (
     <motion.div
-      ref={ref}
-      initial={hiddenVariant}
-      animate={controls}
-      variants={cardVariants}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ duration: 0.6, delay }}
       whileHover={{ scale: 1.03 }}
-      className=" bg-white text-black p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-default"
+      className="bg-white text-black p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-default"
     >
       {children}
     </motion.div>
@@ -43,18 +21,18 @@ const Education = () => {
   return (
     <div
       id="education"
-      className=" w-11/12 mx-auto py-10 px-4 md:px-8 rounded-lg shadow-lg"
+      className="w-11/12 mx-auto py-10 px-4 md:px-8 rounded-lg shadow-lg"
     >
-      <h2 className="text-3xl font-bold mb-10 text-center ">
+      <h2 className="text-3xl font-bold mb-10 text-center">
         Educational Qualification
       </h2>
 
       <div className="space-y-8">
-        <EducationCard variantType="left">
+        <EducationCard delay={0.1}>
           <div className="flex items-center gap-3 text-xl font-semibold mb-4 text-primary">
             <FaGraduationCap /> B.Sc. in Computer Science and Engineering
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm ">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
             <div className="flex items-center gap-2">
               <FaUniversity className="text-green-600" />
               Bangladesh University of Business and Technology (BUBT)
@@ -67,11 +45,11 @@ const Education = () => {
           </div>
         </EducationCard>
 
-        <EducationCard variantType="right">
+        <EducationCard delay={0.2}>
           <div className="flex items-center gap-3 text-xl font-semibold mb-4 text-primary">
             <FaGraduationCap /> Diploma in Computer Engineering
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm ">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
             <div className="flex items-center gap-2">
               <FaUniversity className="text-green-600" />
               Shariatpur Polytechnic Institute
@@ -84,11 +62,11 @@ const Education = () => {
           </div>
         </EducationCard>
 
-        <EducationCard variantType="bottom"   >
+        <EducationCard delay={0.3}>
           <div className="flex items-center gap-3 text-xl font-semibold mb-4 text-primary">
             <FaGraduationCap /> Secondary School Certificate (SSC)
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-end text-sm ">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
             <div className="flex items-center gap-2">
               <FaSchool className="text-green-600" />
               Charmugria Marchant High School
