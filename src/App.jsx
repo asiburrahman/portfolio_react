@@ -28,7 +28,7 @@ function App() {
     
 
   return (
-     <Router>
+     <Router >
     <Navbar />
     <Hero />
     <About />

@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
 import { FaUser, FaEnvelope, FaPhone, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa';
@@ -15,7 +16,7 @@ const Contact = () => {
         }
       )
       .then(
-        (result) => {
+        () => {
           Swal.fire({
             icon: 'success',
             title: 'Message sent successfully!',
@@ -36,13 +37,24 @@ const Contact = () => {
   };
 
   return (
-    <div id="contacts" className="w-11/12 mx-auto p-6 bg-base-100">
+    <motion.div
+      id="contacts"
+      className="w-11/12 mx-auto p-6 "
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.5 }}
+    >
       <h2 className="text-3xl font-bold mb-6 text-center">Contact Me</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Left: Contact Info and Map */}
-        <div>
-          <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
-          <div className="space-y-4 ">
+        <motion.div
+          className="space-y-6"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.5 }}
+        >
+          <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
+          <div className="space-y-4 text-base">
             <div className="flex items-center"><FaUser className="text-blue-500 mr-3" /><span className="font-medium">Asibur Rahman</span></div>
             <div className="flex items-center"><FaEnvelope className="text-blue-500 mr-3" /><a href="mailto:asibur70@gmail.com" className="text-blue-600 hover:underline">asibur70@gmail.com</a></div>
             <div className="flex items-center"><FaPhone className="text-blue-500 mr-3" /><span>+8801747311512</span></div>
@@ -61,10 +73,17 @@ const Contact = () => {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right: Contact Form */}
-        <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
+        <motion.form
+          ref={formRef}
+          onSubmit={sendEmail}
+          className=" p-6 rounded-lg shadow-lg space-y-4"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.5 }}
+        >
           <input type="hidden" name="to_email" value="asibur70@gmail.com" />
           <div>
             <label className="block font-medium mb-1">Name</label>
@@ -78,10 +97,10 @@ const Contact = () => {
             <label htmlFor="message" className="block font-medium mb-1">Message</label>
             <textarea name="message" className="textarea textarea-bordered w-full" rows="5" required></textarea>
           </div>
-          <button type="submit" className="btn btn-primary">Send Message</button>
-        </form>
+          <button type="submit" className="btn btn-primary w-full">Send Message</button>
+        </motion.form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

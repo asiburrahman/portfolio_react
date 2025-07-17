@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { FaTimes } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
 const projects = [
   {
@@ -86,7 +87,6 @@ const projects = [
       "Add calendar sync and ticketing features.",
   },
 ];
-
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const modalRef = useRef();
@@ -112,134 +112,167 @@ const Projects = () => {
   }, [selectedProject]);
 
   return (
-    <div className=" w-11/12 mx-auto ">
-      <h2 className="text-3xl font-bold mb-8 text-center">My Projects</h2>
-      <div className="space-y-12">
+    <motion.div
+      className="w-11/12 mx-auto"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+    >
+      <h2 className="text-3xl font-bold mb-12 text-center">My Projects</h2>
+      <div className="grid grid-cols-1 gap-12">
         {projects.map((project) => (
-          <div
+          <motion.div
             key={project.id}
-            className="flex flex-col md:flex-row bg-base-300 rounded-lg shadow-lg overflow-hidden"
+            className=" rounded-xl overflow-hidden shadow-2xl hover:shadow-xl transition-transform duration-300"
+            whileHover={{ scale: 1.02 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
-            {/* Left side: Image slider */}
-            <div className="md:w-2/3">
-              <Swiper
-                modules={[Navigation, Pagination, Autoplay]}
-                navigation
-                pagination={{ clickable: true }}
-                autoplay={{ delay: 2500, disableOnInteraction: false }}
-                loop
-                className="lg:max-h-[80vh] md:h-full"
-              >
-                {project.images.map((img, idx) => (
-                  <SwiperSlide key={idx}>
-                    <img
-                      src={img}
-                      alt={`${project.name} screenshot ${idx + 1}`}
-                      className="w-full max-h-[80vh] md:h-full object-cover"
-                    />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-
-            {/* Right side: Info and View More */}
-            <div className="md:w-1/3 p-6 flex flex-col justify-center space-y-4">
-              <h3 className="text-2xl font-semibold">{project.name}</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              {/* Left: Slider */}
               <div>
-                <h4 className="font-semibold mb-2">Technology Stack:</h4>
-                <ul className="list-disc list-inside ">
-                  {project.techStack.map((tech, i) => (
-                    <li key={i}>{tech}</li>
+                <Swiper
+                  modules={[Navigation, Pagination, Autoplay]}
+                  navigation
+                  pagination={{ clickable: true }}
+                  autoplay={{ delay: 3000, disableOnInteraction: false }}
+                  loop
+                  className="h-full"
+                >
+                  {project.images.map((img, idx) => (
+                    <SwiperSlide key={idx}>
+                      <img
+                        src={img}
+                        alt={project.name + " screenshot " + (idx + 1)}
+                        className="object-cover w-full h-full"
+                      />
+                    </SwiperSlide>
                   ))}
-                </ul>
+                </Swiper>
               </div>
-              <button
-                className="btn btn-primary w-full mt-4"
-                onClick={() => setSelectedProject(project)}
-              >
-                View More
-              </button>
+
+              {/* Right: Project Info */}
+              <div className="p-6 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">{project.name}</h3>
+                  <p className="text-sm mb-4">{project.shortDesc}</p>
+                  <h4 className="font-medium mb-2">Technologies:</h4>
+                  <ul className="flex flex-wrap gap-2 text-sm">
+                    {project.techStack.map((tech, i) => (
+                      <li
+                        key={i}
+                        className="px-3 py-1 bg-primary text-white rounded-full"
+                      >
+                        {tech}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <button
+                  className="btn btn-outline btn-primary mt-6"
+                  onClick={() => setSelectedProject(project)}
+                >
+                  View More
+                </button>
+              </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
 
       {/* Modal */}
-      {selectedProject && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div
-            ref={modalRef}
-            className="bg-base-300 rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 relative"
+      <AnimatePresence>
+        {selectedProject && (
+          <motion.div
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
           >
-            <button
-              className="btn btn-sm btn-circle btn-ghost absolute top-4 right-4 text-xl"
-              onClick={() => setSelectedProject(null)}
-              aria-label="Close modal"
+            <motion.div
+              ref={modalRef}
+              className="bg-base-100 rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 relative"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 1 }}
             >
-              <FaTimes />
-            </button>
-            <h3 className="text-2xl font-bold mb-4">{selectedProject.name}</h3>
+              <button
+                className="btn btn-sm btn-circle btn-ghost absolute top-4 right-4 text-xl"
+                onClick={() => setSelectedProject(null)}
+                aria-label="Close modal"
+              >
+                <FaTimes />
+              </button>
+              <h3 className="text-2xl font-bold mb-4">{selectedProject.name}</h3>
 
-            {/* Modal Image slider */}
-            <Swiper
-              modules={[Navigation, Pagination, Autoplay]}
-              navigation
-              pagination={{ clickable: true }}
-              autoplay={{ delay: 3000, disableOnInteraction: false }}
-              loop
-              className="h-64 mb-4 rounded"
-            >
-              {selectedProject.images.map((img, idx) => (
-                <SwiperSlide key={idx}>
-                  <img
-                    src={img}
-                    alt={`${selectedProject.name} screenshot ${idx + 1}`}
-                    className="w-full h-64 object-cover rounded"
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-
-            <p className="mb-4">{selectedProject.description}</p>
-
-            <div className="mb-4">
-              <h4 className="font-semibold">Technology Stack:</h4>
-              <ul className="list-disc list-inside">
-                {selectedProject.techStack.map((tech, idx) => (
-                  <li key={idx}>{tech}</li>
+              <Swiper
+                modules={[Navigation, Pagination, Autoplay]}
+                navigation
+                pagination={{ clickable: true }}
+                autoplay={{ delay: 3000, disableOnInteraction: false }}
+                loop
+                className="h-64 mb-4 rounded"
+              >
+                {selectedProject.images.map((img, idx) => (
+                  <SwiperSlide key={idx}>
+                    <img
+                      src={img}
+                      alt={`${selectedProject.name} screenshot ${idx + 1}`}
+                      className="w-full h-64 object-cover rounded"
+                    />
+                  </SwiperSlide>
                 ))}
-              </ul>
-            </div>
+              </Swiper>
 
-            <p className="mb-2">
-              <strong>Challenges:</strong> {selectedProject.challenges}
-            </p>
-            <p className="mb-4">
-              <strong>Future Plans:</strong> {selectedProject.futurePlans}
-            </p>
+              <p className="mb-4 text-sm">{selectedProject.description}</p>
 
-            <div className="flex gap-4">
-              <a
-                href={selectedProject.liveLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-outline btn-success flex-grow"
-              >
-                Live Project
-              </a>
-              <a
-                href={selectedProject.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-outline btn-secondary flex-grow"
-              >
-                GitHub Repo
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
+              <div className="mb-4">
+                <h4 className="font-semibold">Technology Stack:</h4>
+                <ul className="flex flex-wrap gap-2 text-sm mt-2">
+                  {selectedProject.techStack.map((tech, idx) => (
+                    <li
+                      key={idx}
+                      className="px-3 py-1 bg-base-300 rounded-full"
+                    >
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <p className="mb-2 text-sm">
+                <strong>Challenges:</strong> {selectedProject.challenges}
+              </p>
+              <p className="mb-4 text-sm">
+                <strong>Future Plans:</strong> {selectedProject.futurePlans}
+              </p>
+
+              <div className="flex flex-col md:flex-col gap-4">
+                <a
+                  href={selectedProject.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-success w-full"
+                >
+                  Live Project
+                </a>
+                <a
+                  href={selectedProject.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-secondary w-full"
+                >
+                  GitHub Repo
+                </a>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
 };
 
