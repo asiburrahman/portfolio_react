@@ -65,13 +65,13 @@ const projects = [
     id: 3,
     name: "EventNest",
     images: [
-      "/EventNest/1.jpg",
-      "/EventNest/2.jpg",
-      "/EventNest/3.jpg",
-      "/EventNest/4.jpg",
-      "/EventNest/5.jpg",
-      "/EventNest/6.jpg",
-      "/EventNest/7.jpg",
+      "https://i.ibb.co/MxLd2phk/4.jpg",
+      "https://i.ibb.co/zVj1qhxV/5.jpg",
+      "https://i.ibb.co/BVYMp35p/6.jpg",
+      "https://i.ibb.co/fz4BjW1D/7.jpg",
+      "https://i.ibb.co/ksyJ645F/1.jpg",
+      "https://i.ibb.co/bMz4ynhm/2.jpg",
+      "https://i.ibb.co/YTp2f2KZ/3.jpg",
       
   
     ],
