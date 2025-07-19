@@ -146,7 +146,7 @@ const Projects = () => {
                       <img
                         src={img}
                         alt={project.name + " screenshot " + (idx + 1)}
-                        className="object-cover w-full h-full"
+                        className="object-cover w-full h-full rounded-xl"
                       />
                     </SwiperSlide>
                   ))}
