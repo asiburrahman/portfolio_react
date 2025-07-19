@@ -7,14 +7,14 @@ const experienceData = [
     title: 'Senior IT Officer',
     company: 'Shishir Knitting and Dyeing Ltd',
     duration: 'Aug 2022 - Present',
-    icon: <FaLaptopCode className="text-xl text-primary" />,
+    icon: <FaLaptopCode className="text-xl text-black " />,
     details: 'Hosting, WordPress, SEO, MikroTik, CCTV, LAN/Wi-Fi, Troubleshooting'
   },
   {
     title: 'Junior IT Executive',
     company: 'Career Overseas Consultants Ltd',
     duration: 'Nov 2020 – Jul 2021',
-    icon: <FaNetworkWired className="text-xl text-secondary" />,
+    icon: <FaNetworkWired className="text-xl text-black " />,
     details: 'Networking, Hardware Maintenance, Software Troubleshooting'
   }
 ];
@@ -41,11 +41,11 @@ const Experience = () => {
             <div className="flex items-center gap-3 mb-2">
               {exp.icon}
               <div>
-                <h3 className="text-lg font-semibold text-black">{exp.title}</h3>
+                <h3 className="text-lg font-semibold text-primary">{exp.title}</h3>
                 <p className="text-sm text-black">{exp.company} — {exp.duration}</p>
               </div>
             </div>
-            <p className="text-sm ">{exp.details}</p>
+            <p className="text-sm text-black ">{exp.details}</p>
           </motion.li>
         ))}
       </ul>
