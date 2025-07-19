@@ -28,7 +28,7 @@ const projects = [
     shortDesc:
       "An application for food sharing with CRUD functionalities and secure user management.",
     liveLink: "https://foodsharing-ce4a2.web.app/",
-    githubLink: "https://github.com/asiburcse/Food-Sharing",
+    githubLink: "https://github.com/asiburrahman/foodNeighbor-fontend",
     challenges:
       "Managing secure user authentication and real-time updates was challenging.",
     futurePlans:
@@ -55,7 +55,7 @@ const projects = [
       "A freelancer platform to post jobs, manage proposals and hire professionals.",
     shortDesc: "Full-stack freelancer marketplace with job posting and bidding.",
     liveLink: "https://react-password-auth.web.app/",
-    githubLink: "https://github.com/asiburcse/FreelanceNation",
+    githubLink: "https://github.com/asiburrahman/freelance-fontend",
     challenges:
       "Implementing secure payments and real-time notifications was complex.",
     futurePlans:
@@ -113,6 +113,7 @@ const Projects = () => {
 
   return (
     <motion.div
+    id="project"
       className="w-11/12 mx-auto my-10"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}

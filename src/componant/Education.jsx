@@ -5,6 +5,7 @@ import { FaGraduationCap, FaUniversity, FaCalendarAlt, FaSchool } from 'react-ic
 const EducationCard = ({ delay = 0, children }) => {
   return (
     <motion.div
+      id="education"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.2 }}

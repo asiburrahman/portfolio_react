@@ -44,7 +44,7 @@ const Hero = () => {
             <a href="https://x.com/asibur70" target="_blank" rel="noreferrer" aria-label="Twitter"><FaTwitter /></a>
           </div>
           <a
-            href="/resume.pdf"
+            href="/asibur_rahman.pdf"
             download
             className="btn btn-primary mt-8 w-full max-w-xs mx-auto lg:mx-0 text-center px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
           >

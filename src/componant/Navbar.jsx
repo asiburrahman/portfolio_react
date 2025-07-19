@@ -1,4 +1,5 @@
-import { FaDownload, FaHome, FaUser, FaEnvelope } from "react-icons/fa";
+import { FaDownload, FaHome, FaUser, FaEnvelope,FaGraduationCap,FaProjectDiagram,
+   } from "react-icons/fa";
 import { Link } from "react-router";
 import Theme from "./Theme";
 import { motion } from "framer-motion";
@@ -11,14 +12,33 @@ const scrollToSection = (id) => {
 };
 
 const link = <>
-    <li><button onClick={() => scrollToSection("hero")} className="flex items-center gap-1">
-        <FaHome />Home
-    </button></li>
-    <li><button onClick={() => scrollToSection("about")} className="flex items-center gap-1">
-        <FaUser />About</button></li>
-    <li><button onClick={() => scrollToSection("contacts")} className="flex items-center gap-1">
-        <FaEnvelope />Contact
-    </button></li>
+    <>
+    <li>
+      <button onClick={() => scrollToSection("hero")} className="flex items-center gap-1">
+        <FaHome /> Home
+      </button>
+    </li>
+    <li>
+      <button onClick={() => scrollToSection("about")} className="flex items-center gap-1">
+        <FaUser /> About
+      </button>
+    </li>
+    <li>
+      <button onClick={() => scrollToSection("education")} className="flex items-center gap-1">
+        <FaGraduationCap /> Education
+      </button>
+    </li>
+    <li>
+      <button onClick={() => scrollToSection("project")} className="flex items-center gap-1">
+        <FaProjectDiagram /> Projects
+      </button>
+    </li>
+    <li>
+      <button onClick={() => scrollToSection("contacts")} className="flex items-center gap-1">
+        <FaEnvelope /> Contact
+      </button>
+    </li>
+  </>
 </>
 
 const Navbar = () => (
@@ -54,7 +74,7 @@ const Navbar = () => (
                 </ul>
             </div>
             <div className="navbar-end flex gap-2">
-                <a href="/resume.pdf" download className="btn btn-outline btn-sm flex items-center gap-2">
+                <a href="/asibur_rahman.pdf" download className="btn btn-outline btn-sm flex items-center gap-2">
                     <FaDownload /> Resume
                 </a>
                 <Theme></Theme>
