@@ -12,14 +12,14 @@ const projects = [
     id: 1,
     name: "FoodNeighbor",
     images: [
-      "/FoodNeighbor/1.jpg",
-      "/FoodNeighbor/2.jpg",
-      "/FoodNeighbor/3.jpg",
-      "/FoodNeighbor/4.jpg",
-      "/FoodNeighbor/5.jpg",
-      "/FoodNeighbor/6.jpg",
-      "/FoodNeighbor/7.jpg",
-      "/FoodNeighbor/8.jpg",
+      "https://i.ibb.co/Y72mTKJm/1.jpg",
+      "https://i.ibb.co/WpMzMZYx/2.jpg",
+      "https://i.ibb.co/PZDT1yX1/3.jpg",
+      "https://i.ibb.co/kvYnGKM/4.jpg",
+      "https://i.ibb.co/pBG74bCg/5.jpg",
+      "https://i.ibb.co/JFpbBP1G/6.jpg",
+      "https://i.ibb.co/svWsChHZ/7.jpg",
+      "https://i.ibb.co/nMdrg4m4/8.jpg",
     
     ],
     techStack: ["React", "Firebase", "Tailwind CSS","DaisyUi", "Node.js", "ExpressJs","Mongodb"],
@@ -38,17 +38,17 @@ const projects = [
     id: 2,
     name: "FreelanceNation",
     images: [
-      "/FreelanceNation/1.jpg",
-      "/FreelanceNation/2.jpg",
-      "/FreelanceNation/3.jpg",
-      "/FreelanceNation/4.jpg",
-      "/FreelanceNation/5.jpg",
-      "/FreelanceNation/6.jpg",
-      "/FreelanceNation/7.jpg",
-      "/FreelanceNation/8.jpg",
-      "/FreelanceNation/9.jpg",
-      "/FreelanceNation/10.jpg",
-      "/FreelanceNation/11.jpg",
+      "https://i.ibb.co/60yTPMhy/1.jpg",
+      "https://i.ibb.co/WWVhXrx8/2.jpg",
+      "https://i.ibb.co/8gsSGbLF/3.jpg",
+      "https://i.ibb.co/S4JCBS0X/4.jpg",
+      "https://i.ibb.co/k2H8y44q/5.jpg",
+      "https://i.ibb.co/5x621Q66/6.jpg",
+      "https://i.ibb.co/PvzpChvL/7.jpg",
+      "https://i.ibb.co/4RWrtLbt/8.jpg",
+      "https://i.ibb.co/nMGDXNrC/9.jpg",
+      "https://i.ibb.co/DDW1Q8DR/10.jpg",
+      "https://i.ibb.co/BV99rfYQ/11.jpg",
     ],
     techStack: ["React","Firebase", "Node.js", "Express", "MongoDB", "Tailwind CSS","DaisyUi","Mongodb"],
     description:
@@ -113,7 +113,7 @@ const Projects = () => {
 
   return (
     <motion.div
-      className="w-11/12 mx-auto"
+      className="w-11/12 mx-auto my-10"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
