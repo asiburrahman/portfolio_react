@@ -26,11 +26,11 @@ const Footer = () => {
 
         <div className="space-y-1 text-sm text-center">
           <div className="flex items-center justify-center gap-2">
-            <FaPhoneAlt className="text-primary" />
+            <FaPhoneAlt className="text-accent" />
             <span>+8801747311512</span>
           </div>
           <div className="flex items-center justify-center gap-2">
-            <FaEnvelope className="text-primary" />
+            <FaEnvelope className="text-accent" />
             <a
               href="mailto:asibur70@gmail.com"
               className="hover:underline"
@@ -39,7 +39,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="flex items-center justify-center gap-2">
-            <FaMapMarkerAlt className="text-primary" />
+            <FaMapMarkerAlt className="text-accent" />
             <span>Mirpur-6, Dhaka, Bangladesh</span>
           </div>
         </div>

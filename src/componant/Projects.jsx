@@ -136,7 +136,7 @@ const Projects = () => {
               <div>
                 <Swiper
                   modules={[Navigation, Pagination, Autoplay]}
-                  navigation
+                  
                   pagination={{ clickable: true }}
                   autoplay={{ delay: 3000, disableOnInteraction: false }}
                   loop
@@ -147,7 +147,7 @@ const Projects = () => {
                       <img
                         src={img}
                         alt={project.name + " screenshot " + (idx + 1)}
-                        className="object-cover w-full h-full rounded-xl"
+                        className="object-cover w-full h-full lg:rounded-xl"
                       />
                     </SwiperSlide>
                   ))}
@@ -172,7 +172,7 @@ const Projects = () => {
                   </ul>
                 </div>
                 <button
-                  className="btn btn-outline btn-primary mt-6"
+                  className="btn  btn-primary  mt-6"
                   onClick={() => setSelectedProject(project)}
                 >
                   View More

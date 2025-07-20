@@ -55,11 +55,11 @@ const Contact = () => {
         >
           <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
           <div className="space-y-4 text-base">
-            <div className="flex items-center"><FaUser className="text-blue-500 mr-3" /><span className="font-medium">Asibur Rahman</span></div>
-            <div className="flex items-center"><FaEnvelope className="text-blue-500 mr-3" /><a href="mailto:asibur70@gmail.com" className=" hover:underline">asibur70@gmail.com</a></div>
-            <div className="flex items-center"><FaPhone className="text-blue-500 mr-3" /><span>+8801747311512</span></div>
-            <div className="flex items-center"><FaWhatsapp className="text-green-500 mr-3" /><span>+8801747311512</span></div>
-            <div className="flex items-center"><FaMapMarkerAlt className="text-red-500 mr-3" /><span>Mirpur-6, Dhaka, Bangladesh</span></div>
+            <div className="flex items-center"><FaUser className="text-accent mr-3" /><span className="font-medium">Asibur Rahman</span></div>
+            <div className="flex items-center"><FaEnvelope className="text-accent mr-3" /><a href="mailto:asibur70@gmail.com" className=" hover:underline">asibur70@gmail.com</a></div>
+            <div className="flex items-center "><FaPhone className="text-accent mr-3  "  /><span>+8801747311512</span></div>
+            <div className="flex items-center"><FaWhatsapp className="text-accent mr-3" /><span>+8801747311512</span></div>
+            <div className="flex items-center"><FaMapMarkerAlt className="text-accent mr-3" /><span>Mirpur-6, Dhaka, Bangladesh</span></div>
           </div>
           <div className="mt-6 rounded-lg overflow-hidden shadow-md">
             <iframe
@@ -85,7 +85,7 @@ const Contact = () => {
           transition={{ duration: 1.5 }}
         >
           <input type="hidden" name="to_email" value="asibur70@gmail.com" />
-          <div>
+          <div>bg-g
             <label className="block font-medium mb-1">Name</label>
             <input type="text" className="input input-bordered w-full" name="user_name" required />
           </div>

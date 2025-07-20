@@ -46,9 +46,9 @@ const Navbar = () => (
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className='sticky top-0  z-50 shadow-xl font-bold  text-black '
+        className='sticky top-0  z-50 shadow-xl font-bold  text-black bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 '
     >
-        <div className="navbar w-11/12 mx-auto ">
+        <div className="navbar w-11/12 mx-auto  ">
             <div className="navbar-start">
                 <div className="dropdown ">
                     <div tabIndex={0} role="button" className="btn btn-ghost  lg:hidden">
