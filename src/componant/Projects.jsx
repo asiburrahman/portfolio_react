@@ -10,6 +10,42 @@ import { motion, AnimatePresence } from "framer-motion";
 const projects = [
   {
     id: 1,
+    name: "FlatManage",
+    images: [
+      "https://i.ibb.co/YFt9XhDG/2.jpg",
+      "https://i.ibb.co/23b2McsX/3.jpg",
+      "https://i.ibb.co/B5RmL2tR/4.jpg",
+      "https://i.ibb.co/v6yGcH5r/5.jpg",
+      "https://i.ibb.co/ZRQQVc4J/6.jpg",
+      "https://i.ibb.co/VWk7JQXc/7.jpg",
+      "https://i.ibb.co/4gZs9r9j/8.jpg",
+      "https://i.ibb.co/6Lwc7SM/9.jpg",
+      "https://i.ibb.co/V0908RTP/10.jpg",
+      "https://i.ibb.co/YF9gy3zd/11.jpg",
+      "https://i.ibb.co/Q3ztm3zm/12.jpg",
+      "https://i.ibb.co/N6dmPX5Z/13.jpg",
+      "https://i.ibb.co/ycb2XNjt/14.jpg",
+      "https://i.ibb.co/6cycRJkG/15.jpg",
+      "https://i.ibb.co/35QhBjFF/16.jpg",
+      "https://i.ibb.co/zWm4qdfc/17.jpg",
+      "https://i.ibb.co/BKrXv9Xs/18.jpg",
+      "https://i.ibb.co/vvKpWP6h/1.jpg",
+   
+    ],
+    techStack: ["React", "Firebase", "Tailwind CSS","DaisyUi", "Node.js", "ExpressJs","Mongodb","Jwt","Stripe"],
+    description:
+      "ManageFlat is a full-featured apartment and building management system designed to simplify administrative tasks for building owners and tenants. Built with the MERN Stack, this web application allows seamless management of apartment listings, member agreements, rent payments, and community announcements, all in one place.The system features role-based dashboards for Admins, Members, and Users. Admins can approve membership requests, manage announcements and coupons, and monitor apartment availability and payment statistics through a real-time dashboard. Members can securely make monthly rent payments using Stripe integration, apply discount coupons, and view payment history. Users can browse building announcements and request apartment agreements.The platform also includes authentication using Firebase, JWT-based API protection, responsive design with Tailwind CSS and DaisyUI, and support for dark/light themes. It incorporates modern libraries such as React Query for efficient data fetching, and Leaflet.js for interactive location maps.",
+    shortDesc:
+      "ManageFlat is a role-based apartment management system built with the MERN stack. It allows admins to manage members, apartments, coupons, and announcements, while members can pay rent using Stripe, apply discount coupons, and view payment history. The platform includes secure authentication, real-time dashboards, and responsive design with dark/light theme support.",
+    liveLink: "https://manageflat-8f1f4.web.app/",
+    githubLink: "https://github.com/asiburrahman/FlatManage-Fontend",
+    challenges:
+      "During the development of the ManageFlat project, I encountered several challenges that helped deepen my technical skills and problem-solving ability. Implementing role-based dashboards for users, members, and admins required precise control of route protection, user roles, and conditional UI rendering. Integrating Stripe for secure rent payments—along with applying coupon-based discounts dynamically—demanded a careful approach to data validation and transaction accuracy. Managing Firebase token verification on both the frontend and backend proved complex, especially in handling expired or invalid tokens gracefully. Ensuring real-time synchronization of user states, such as agreement approvals or coupon updates, also required consistent state management and effective backend queries. Additionally, building a responsive admin dashboard that could display analytics like apartment availability, user count, and occupancy rates presented significant UI/UX challenges.",
+    futurePlans:
+      "Looking forward, I plan to enhance the system by introducing push notifications to alert users about new announcements, payment updates, and agreement status changes. A scheduled rent reminder feature is also in the pipeline to help members stay informed about due dates. For better administrative efficiency, I aim to implement downloadable monthly reports that include payment history, user activity logs, and occupancy trends. Furthermore, I intend to add advanced filtering and search functionality for apartments based on rent, availability, and location. To improve accessibility, future updates will include multi-language support (including Bangla), and eventually, I plan to develop a mobile version of ManageFlat using React Native for broader reach and ease of use.",
+  },
+  {
+    id: 2,
     name: "FoodNeighbor",
     images: [
       "https://i.ibb.co/Y72mTKJm/1.jpg",
@@ -35,7 +71,7 @@ const projects = [
       "Adding a mobile app version and real-time chat for donors and receivers.",
   },
   {
-    id: 2,
+    id: 3,
     name: "FreelanceNation",
     images: [
       "https://i.ibb.co/60yTPMhy/1.jpg",
@@ -61,31 +97,31 @@ const projects = [
     futurePlans:
       "Add advanced filtering, reviews, and payment integration.",
   },
-  {
-    id: 3,
-    name: "EventNest",
-    images: [
-      "https://i.ibb.co/MxLd2phk/4.jpg",
-      "https://i.ibb.co/zVj1qhxV/5.jpg",
-      "https://i.ibb.co/BVYMp35p/6.jpg",
-      "https://i.ibb.co/fz4BjW1D/7.jpg",
-      "https://i.ibb.co/ksyJ645F/1.jpg",
-      "https://i.ibb.co/bMz4ynhm/2.jpg",
-      "https://i.ibb.co/YTp2f2KZ/3.jpg",
+  // {
+  //   id: 4,
+  //   name: "EventNest",
+  //   images: [
+  //     "https://i.ibb.co/MxLd2phk/4.jpg",
+  //     "https://i.ibb.co/zVj1qhxV/5.jpg",
+  //     "https://i.ibb.co/BVYMp35p/6.jpg",
+  //     "https://i.ibb.co/fz4BjW1D/7.jpg",
+  //     "https://i.ibb.co/ksyJ645F/1.jpg",
+  //     "https://i.ibb.co/bMz4ynhm/2.jpg",
+  //     "https://i.ibb.co/YTp2f2KZ/3.jpg",
       
   
-    ],
-    techStack: ["React", "Firebase", "Tailwind CSS","DaisyUi"],
-    description:
-      "A local event management platform to browse, RSVP, and get updates on events.",
-    shortDesc: "Event listing and management platform with user feedback system.",
-    liveLink: "https://eventnest.netlify.app/",
-    githubLink: "https://github.com/asiburcse/EventNest",
-    challenges:
-      "Ensuring event data consistency and handling user registrations smoothly.",
-    futurePlans:
-      "Add calendar sync and ticketing features.",
-  },
+  //   ],
+  //   techStack: ["React", "Firebase", "Tailwind CSS","DaisyUi"],
+  //   description:
+  //     "A local event management platform to browse, RSVP, and get updates on events.",
+  //   shortDesc: "Event listing and management platform with user feedback system.",
+  //   liveLink: "https://eventnest.netlify.app/",
+  //   githubLink: "https://github.com/asiburcse/EventNest",
+  //   challenges:
+  //     "Ensuring event data consistency and handling user registrations smoothly.",
+  //   futurePlans:
+  //     "Add calendar sync and ticketing features.",
+  // },
 ];
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
