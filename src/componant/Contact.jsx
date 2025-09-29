@@ -85,7 +85,7 @@ const Contact = () => {
           transition={{ duration: 1.5 }}
         >
           <input type="hidden" name="to_email" value="asibur70@gmail.com" />
-          <div>bg-g
+          <div>
             <label className="block font-medium mb-1">Name</label>
             <input type="text" className="input input-bordered w-full" name="user_name" required />
           </div>
