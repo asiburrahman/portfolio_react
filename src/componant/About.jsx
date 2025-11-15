@@ -21,7 +21,7 @@ const About = () => {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 2 }}
-      className="p-6  w-11/12 mx-auto "
+      className=" w-11/12 mx-auto relative overflow-hidden grid grid-cols-1 md:grid-cols-2 items-center gap-10 bg-base-200 border border-primary/30 rounded-xl p-6 sm:p-10 shadow-lg hover:shadow-primary/10 transition-shadow duration-300  "
     >
       <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">

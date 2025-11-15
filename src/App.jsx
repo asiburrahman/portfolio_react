@@ -11,36 +11,34 @@ import Experience from './componant/Experience';
 import Contact from './componant/Contact';
 import Footer from './componant/Footer';
 import Projects from './componant/Projects';
-
-
-
-
-
-
-
-
-
-
-
+import Squares from './componant/Squares';
 
 function App() {
-
-    
-
   return (
-     <Router >
-    <Navbar />
-    <Hero />
-    <About />
-    <Skills/>
-    <Education />
-    <Experience />
-    <Projects></Projects>
-    <Contact />
-    <Footer />
-  </Router>
-      
-   
+    <>
+       <Squares
+        speed={1}
+        squareSize={40}
+        direction='right' // up, down, left, right, diagonal
+        borderColor='#84a48d'
+        hoverFillColor=''
+      />
+      <Router >
+        <Navbar />
+        <Hero />
+        <About />
+        <Skills />
+        <Education />
+        <Experience />
+        <Projects></Projects>
+        <Contact />
+        <Footer />
+
+      </Router>
+
+    </>
+
+
   )
 }
 

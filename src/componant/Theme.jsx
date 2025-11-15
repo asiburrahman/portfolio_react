@@ -11,7 +11,7 @@ const Theme = () => {
 
 const handleToggle = (e)=>{
   if (e.target.checked) {
-    setTheme('dark')
+    setTheme('cyberpunk')
   }else{
     setTheme('light')
   }
