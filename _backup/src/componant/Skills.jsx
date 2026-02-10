@@ -20,7 +20,7 @@ const Skills = () => (
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6 }}
-    className="p-10  scroll-mt-16 w-11/12 mx-auto  shadow-2xl"
+    className="p-10 scroll-mt-16 w-11/12 mx-auto shadow-2xl rounded-xl bg-base-200"
   >
     <h2 className="text-3xl font-bold mb-6 text-center">My Skills</h2>
     <Swiper
@@ -68,10 +68,10 @@ const Skills = () => (
           <motion.div
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 300 }}
-            className="p-4 bg-white shadow-lg rounded-lg"
+            className="p-4 bg-base-100 shadow-lg rounded-lg"
           >
             {skill.icon}
-            <p className="font-semibold text-black mt-1">{skill.label}</p>
+            <p className="font-semibold mt-1">{skill.label}</p>
           </motion.div>
         </SwiperSlide>
       ))}

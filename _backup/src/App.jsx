@@ -1,7 +1,4 @@
 import './App.css'
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router";
-
-
 import Navbar from './componant/Navbar';
 import Hero from './componant/Hero';
 import About from './componant/About';
@@ -16,30 +13,26 @@ import Squares from './componant/Squares';
 function App() {
   return (
     <>
-       <Squares
+      <Squares
         speed={1}
         squareSize={40}
-        direction='right' // up, down, left, right, diagonal
-        borderColor='#84a48d'
-        hoverFillColor=''
+        direction="right"
+        borderColor="#84a48d"
+        hoverFillColor=""
       />
-      <Router >
+      <div className="relative z-10">
         <Navbar />
         <Hero />
         <About />
         <Skills />
         <Education />
         <Experience />
-        <Projects></Projects>
+        <Projects />
         <Contact />
         <Footer />
-
-      </Router>
-
+      </div>
     </>
-
-
-  )
+  );
 }
 
 export default App

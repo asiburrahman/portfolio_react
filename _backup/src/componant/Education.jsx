@@ -11,7 +11,7 @@ const EducationCard = ({ delay = 0, children }) => {
       viewport={{ once: false, amount: 0.2 }}
       transition={{ duration: 0.6, delay }}
       whileHover={{ scale: 1.03 }}
-      className="bg-white text-black p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-default"
+      className="bg-base-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-default"
     >
       {children}
     </motion.div>
@@ -22,7 +22,7 @@ const Education = () => {
   return (
     <div
       id="education"
-      className="w-11/12 mx-auto py-10 px-4 md:px-8 rounded-lg shadow-lg"
+      className="w-11/12 mx-auto py-10 px-4 md:px-8 rounded-lg shadow-lg bg-base-200"
     >
       <h2 className="text-3xl font-bold mb-10 text-center">
         Educational Qualification

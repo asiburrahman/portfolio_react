@@ -10,9 +10,12 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm("service_phyrw2g", "template_pgvv64r",
-        formRef.current, {
-          publicKey: '8Vxj2tq6srygft85z',
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_phyrw2g",
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_pgvv64r",
+        formRef.current,
+        {
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '8Vxj2tq6srygft85z',
         }
       )
       .then(

@@ -1,0 +1,9 @@
+/* App-level styles. Tailwind directives live in index.css. */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* keep app-specific overrides here */
