@@ -6,6 +6,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Asibur Rahman - Full Stack Developer",
   description: "Portfolio of Asibur Rahman, a Full Stack Developer specializing in React, Node.js, and MERN stack.",
+  icons: {
+    icon: "/logo.jpg",
+  },
 };
 
 export default function RootLayout({ children }) {
