@@ -51,8 +51,8 @@ const Navbar = () => (
         <div className="navbar w-full lg:w-10/12 mx-auto px-2 md:px-4 flex justify-between items-center">
             <div className="navbar-start flex-1 flex items-center">
                 <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden p-1 min-h-0 h-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div tabIndex={0} role="button" className="btn btn-ghost btn-sm lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
                         </svg>
                     </div>
@@ -75,7 +75,7 @@ const Navbar = () => (
             </div>
 
             <div className="navbar-end flex-1 flex justify-end items-center gap-1 md:gap-2">
-                <a href="/asibur_rahman.pdf" download className="btn btn-outline btn-xs md:btn-sm flex items-center gap-1">
+                <a href="/asibur_rahman.pdf" download className="btn btn-outline btn-sm flex items-center gap-1">
                     <FaDownload /> <span>Resume</span>
                 </a>
                 <Theme />

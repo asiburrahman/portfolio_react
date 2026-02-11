@@ -23,7 +23,7 @@ const Theme = () => {
   };
 
   return (
-    <label className="swap swap-rotate text-current">
+    <label className="swap swap-rotate btn btn-ghost btn-sm text-current">
       <input
         type="checkbox"
         onChange={handleToggle}
@@ -32,7 +32,7 @@ const Theme = () => {
 
       {/* sun icon */}
       <svg
-        className="swap-on h-8 w-8 fill-current"
+        className="swap-on h-6 w-6 fill-current"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >
@@ -41,7 +41,7 @@ const Theme = () => {
 
       {/* moon icon */}
       <svg
-        className="swap-off h-8 w-8 fill-current"
+        className="swap-off h-6 w-6 fill-current"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >
