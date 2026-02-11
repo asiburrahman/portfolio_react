@@ -24,6 +24,12 @@
 }
 
 [data-theme="lemonade"] {
+  --color-primary: oklch(65% 0.25 145);
+  /* A vibrant green */
+  --color-accent: oklch(75% 0.2 145);
+  /* A lighter green for accents */
+  --color-footer-bg: oklch(95% 0.05 145);
+  /* Very light green background for footer */
   --grid-border: rgba(0, 0, 0, 0.05);
   --grid-hover: rgba(0, 0, 0, 0.03);
 }

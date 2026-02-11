@@ -48,11 +48,11 @@ const Navbar = () => (
         transition={{ duration: 1, ease: "easeOut" }}
         className="sticky top-0 z-50 shadow-xl font-bold bg-base-100/80 backdrop-blur-md"
     >
-        <div className="navbar w-11/12 lg:w-10/12 mx-auto px-4">
-            <div className="navbar-start">
+        <div className="navbar w-full lg:w-10/12 mx-auto px-2 md:px-4 flex justify-between items-center">
+            <div className="navbar-start flex-1 flex items-center">
                 <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden p-1 min-h-0 h-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
                         </svg>
                     </div>
@@ -63,20 +63,20 @@ const Navbar = () => (
                         {link}
                     </ul>
                 </div>
-                <div className="flex items-center justify-center gap-2">
-                    <button onClick={() => scrollToSection("hero")} className="text-sm font-bold md:text-2xl lg:text-3xl avatar">
-                        <div className="w-12 h-12 rounded-full relative">
-                            <Image src="/logo.jpg" alt="Logo" fill className="rounded-full object-cover" sizes="48px" />
-                        </div>
-                    </button>
-                </div>
+                <button onClick={() => scrollToSection("hero")} className="avatar ml-1">
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full relative">
+                        <Image src="/logo.jpg" alt="Logo" fill className="rounded-full object-cover" sizes="(max-width: 768px) 40px, 48px" />
+                    </div>
+                </button>
             </div>
+
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">{link}</ul>
             </div>
-            <div className="navbar-end flex gap-2">
-                <a href="/asibur_rahman.pdf" download className="btn btn-outline btn-sm flex items-center gap-2">
-                    <FaDownload /> Resume
+
+            <div className="navbar-end flex-1 flex justify-end items-center gap-1 md:gap-2">
+                <a href="/asibur_rahman.pdf" download className="btn btn-outline btn-xs md:btn-sm flex items-center gap-1">
+                    <FaDownload /> <span>Resume</span>
                 </a>
                 <Theme />
             </div>

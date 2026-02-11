@@ -6,12 +6,13 @@ import { FaGraduationCap, FaUniversity, FaCalendarAlt, FaSchool } from 'react-ic
 const EducationCard = ({ delay = 0, children }) => {
     return (
         <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
-            transition={{ duration: 0.6, delay }}
-            whileHover={{ scale: 1.03 }}
-            className="bg-base-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 cursor-default"
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, delay, ease: "easeOut" }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="bg-base-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-default"
         >
             {children}
         </motion.div>

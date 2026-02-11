@@ -44,26 +44,28 @@ const Contact = () => {
         <motion.div
             id="contacts"
             className="w-11/12 lg:w-10/12 mx-auto p-6 my-20"
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
         >
             <h2 className="text-3xl font-bold mb-6 text-center">Contact Me</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Left: Contact Info and Map */}
                 <motion.div
                     className="space-y-6"
-                    initial={{ opacity: 0, x: -50 }}
+                    initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1.5 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                 >
                     <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
                     <div className="space-y-4 text-base">
-                        <div className="flex items-center"><FaUser className="text-accent mr-3" /><span className="font-medium">Asibur Rahman</span></div>
-                        <div className="flex items-center"><FaEnvelope className="text-accent mr-3" /><a href="mailto:asibur70@gmail.com" className=" hover:underline">asibur70@gmail.com</a></div>
-                        <div className="flex items-center "><FaPhone className="text-accent mr-3  " /><span>+8801747311512</span></div>
-                        <div className="flex items-center"><FaWhatsapp className="text-accent mr-3" /><span>+8801747311512</span></div>
-                        <div className="flex items-center"><FaMapMarkerAlt className="text-accent mr-3" /><span>Mirpur-6, Dhaka, Bangladesh</span></div>
+                        <div className="flex items-center"><FaUser className="text-primary mr-3" /><span className="font-medium">Asibur Rahman</span></div>
+                        <div className="flex items-center"><FaEnvelope className="text-primary mr-3" /><a href="mailto:asibur70@gmail.com" className=" hover:underline">asibur70@gmail.com</a></div>
+                        <div className="flex items-center "><FaPhone className="text-primary mr-3  " /><span>+8801747311512</span></div>
+                        <div className="flex items-center"><FaWhatsapp className="text-primary mr-3" /><span>+8801747311512</span></div>
+                        <div className="flex items-center"><FaMapMarkerAlt className="text-primary mr-3" /><span>Mirpur-6, Dhaka, Bangladesh</span></div>
                     </div>
                     <div className="mt-6 rounded-lg overflow-hidden shadow-md">
                         <iframe
@@ -84,9 +86,10 @@ const Contact = () => {
                     ref={formRef}
                     onSubmit={sendEmail}
                     className="bg-base-200 p-6 rounded-lg shadow-lg space-y-4"
-                    initial={{ opacity: 0, x: 50 }}
+                    initial={{ opacity: 0, x: 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1.5 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
                 >
                     <input type="hidden" name="to_email" value="asibur70@gmail.com" />
                     <div>
@@ -101,7 +104,14 @@ const Contact = () => {
                         <label htmlFor="message" className="block font-medium mb-1">Message</label>
                         <textarea name="message" className="textarea textarea-bordered w-full" rows="5" required></textarea>
                     </div>
-                    <button type="submit" className="btn btn-primary w-full">Send Message</button>
+                    <motion.button
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        type="submit"
+                        className="btn btn-primary w-full"
+                    >
+                        Send Message
+                    </motion.button>
                 </motion.form>
             </div>
         </motion.div>

@@ -4,13 +4,14 @@ import { FaCode, FaBriefcase, FaPalette, FaSmile } from "react-icons/fa";
 import Image from "next/image";
 
 const sectionVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 20 },
     visible: (i) => ({
         opacity: 1,
         y: 0,
         transition: {
-            duration: 2,
-            delay: i * 0.3,
+            duration: 0.8,
+            delay: i * 0.15,
+            ease: "easeOut"
         },
     }),
 };
@@ -19,9 +20,10 @@ const About = () => {
     return (
         <motion.div
             id="about"
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 2 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
             className="w-11/12 lg:w-10/12 mx-auto my-20 relative overflow-hidden bg-base-200 border border-primary/30 rounded-xl p-6 sm:p-10 shadow-lg hover:shadow-primary/10 transition-shadow duration-300"
         >
             <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>

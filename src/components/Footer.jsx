@@ -12,7 +12,7 @@ import {
 const Footer = () => {
     return (
         <motion.footer
-            className="shadow-2xl border-t border-base-300 text-center text-base-content py-10 px-4 bg-base-200"
+            className="shadow-2xl border-t border-base-300 text-center text-base-content py-10 px-4 bg-base-200 light:bg-[var(--color-footer-bg)]"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 
@@ -27,11 +27,11 @@ const Footer = () => {
 
                 <div className="space-y-1 text-sm text-center">
                     <div className="flex items-center justify-center gap-2">
-                        <FaPhoneAlt className="text-accent" />
+                        <FaPhoneAlt className="text-primary" />
                         <span>+8801747311512</span>
                     </div>
                     <div className="flex items-center justify-center gap-2">
-                        <FaEnvelope className="text-accent" />
+                        <FaEnvelope className="text-primary" />
                         <a
                             href="mailto:asibur70@gmail.com"
                             className="hover:underline"
@@ -40,7 +40,7 @@ const Footer = () => {
                         </a>
                     </div>
                     <div className="flex items-center justify-center gap-2">
-                        <FaMapMarkerAlt className="text-accent" />
+                        <FaMapMarkerAlt className="text-primary" />
                         <span>Mirpur-6, Dhaka, Bangladesh</span>
                     </div>
                 </div>

@@ -129,9 +129,10 @@ const Projects = () => {
         <motion.div
             id="project"
             className="w-11/12 lg:w-10/12 mx-auto my-20"
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
         >
             <h2 className="text-3xl font-bold mb-12 text-center">My Projects</h2>
             <div className="grid grid-cols-1 gap-12">
