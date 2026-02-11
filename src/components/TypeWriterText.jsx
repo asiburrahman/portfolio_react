@@ -6,7 +6,7 @@ const TypewriterText = () => {
     return (
         <div className="my-2">
             <h2 className="text-xl lg:text-3xl font-semibold" aria-live="polite">
-                <span className="text-secondary">
+                <span className="text-primary">
                     <Typewriter
                         words={["Full Stack Developer", "MERN Stack Developer", "React Developer"]}
                         loop={true}
